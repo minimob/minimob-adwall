@@ -1,5 +1,0 @@
-<resources>
-    <string name="title_activity_offer_wall">OfferWallActivity</string>
-    <string name="message_offerwall_credit_dialog">Credits will be added after you have completed the action required. Please keep in mind that sometimes it may take a while to update, credits are not always added immediately.</string>
-
-</resources>
