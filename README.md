@@ -10,15 +10,18 @@ repositories{
 }
 
 then you can grab it via maven:
+```xml
 <dependency>
   <groupId>com.minimob</groupId>
   <artifactId>library</artifactId>
   <version>1.0.2-SNAPSHOT</version>
   <type>aar</type>
 </dependency>
-
+```
+```groovy
 or Gradle:
 compile 'com.minimob:library:1.0.2-SNAPSHOT@aar'
+```
 
 # How to use the library:
 - Extend the AddWallActivity and create a new instance of AddWallWebView.
