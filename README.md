@@ -1,4 +1,5 @@
 # minimob_adwall
+An Android library to display adds to your app.
 
 #Download and installation
 You have to include the maven repository into the build.gradle of your app, example:
@@ -18,8 +19,8 @@ then you can grab it via maven:
   <type>aar</type>
 </dependency>
 ```
-```groovy
 or Gradle:
+```groovy
 compile 'com.minimob:library:1.0.2-SNAPSHOT@aar'
 ```
 
