@@ -2,13 +2,13 @@
 
 #Download and installation
 You have to include the maven repository into the build.gradle of your app, example:
-
+```maven
 repositories{
     maven{
         url "https://oss.sonatype.org/content/groups/public"
     }
 }
-
+```
 then you can grab it via maven:
 ```xml
 <dependency>
