@@ -26,7 +26,7 @@ compile 'com.minimob:library:1.0.2-SNAPSHOT@aar'
 
 # How to use the library:
 - Extend the AddWallActivity and create a new instance of AddWallWebView.
-- Override the formatUrl method and pass the user id and campaign id.
+- Override the formatUrl method and pass the user id, campaign id, ratio and label properties.
 - finally load the url with the AddWallWebView instance
 
 see the minimobTest sample application.
