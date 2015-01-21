@@ -21,9 +21,10 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class TestCaseActivity extends AddWallActivity {
 
-    private static final String SENDER_ID = "313919324471";
     private static final String CAMPAIGN_ID = "default";
     private static final String USER_ID = "6934XXXXXX";
+    private static final String RATIO = "8";
+    private static final String LABEL = "testlabels";
 
     private Context context;
     private static String webViewUrl = "";
@@ -37,7 +38,7 @@ public class TestCaseActivity extends AddWallActivity {
         if (savedInstanceState == null) {
             gotoAddWall();
         }
-        webViewUrl = formatUrl(CAMPAIGN_ID,  USER_ID);
+        webViewUrl = formatUrl(CAMPAIGN_ID,  USER_ID, RATIO, LABEL);
     }
 
     protected void gotoAddWall(){
@@ -74,7 +75,7 @@ public class TestCaseActivity extends AddWallActivity {
     protected void onResume() {
         super.onResume();
 
-        updateUI(CAMPAIGN_ID, USER_ID);
+        updateUI(CAMPAIGN_ID, USER_ID, RATIO, LABEL);
     }
 
     public static class PlaceholderFragment extends Fragment {
