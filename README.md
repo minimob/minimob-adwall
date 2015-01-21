@@ -15,13 +15,13 @@ then you can grab it via maven:
 <dependency>
   <groupId>com.minimob</groupId>
   <artifactId>library</artifactId>
-  <version>1.0.2-SNAPSHOT</version>
+  <version>1.0.3</version>
   <type>aar</type>
 </dependency>
 ```
 or Gradle:
 ```groovy
-compile 'com.minimob:library:1.0.2-SNAPSHOT@aar'
+compile 'com.minimob:library:1.0.3'
 ```
 
 # How to use the library:
