@@ -24,10 +24,11 @@ public class TestCaseActivity extends AddWallActivity {
     private static final String CAMPAIGN_ID = "default";
     private static final String USER_ID = "6934XXXXXX";
     private static final String RATIO = "8";
-    private static final String LABEL = "testlabels";
+    private static final String LABEL = "Minutes";
 
     private Context context;
     private static String webViewUrl = "";
+    private String ratio;
 
     private PlaceholderFragment mPlaceholderFragment;
 
@@ -38,7 +39,17 @@ public class TestCaseActivity extends AddWallActivity {
         if (savedInstanceState == null) {
             gotoAddWall();
         }
-        webViewUrl = formatUrl(CAMPAIGN_ID,  USER_ID, RATIO, LABEL);
+        // Use 0 for Multiplier or 1 for Fixed Value
+        FixedValue = 1;
+
+        //$0.30 = 10 Minutes payout, $0.31-$0.80 = 20 Minutes payout and $0.81+ = 30 Minutes Payout
+        AddRatioRange(0.01,0.30,10);
+        AddRatioRange(0.31,0.80,20);
+        AddRatioRange(0.81,999,30);
+
+        ratio = getRatio();
+
+        webViewUrl = formatUrl(CAMPAIGN_ID,  USER_ID, ratio, LABEL);
     }
 
     protected void gotoAddWall(){
