@@ -21,12 +21,12 @@ then you can grab it via maven:
 ```
 or Gradle:
 ```groovy
-compile 'com.minimob:library:1.0.3'
+compile 'com.minimob:library:1.0.5'
 ```
 
 # How to use the library:
 - Extend the AddWallActivity and create a new instance of AddWallWebView.
-- Override the formatUrl method and pass the user id, campaign id, ratio and label properties.
+- Override the formatUrl method and pass the user id, campaign id, ratio and label properties. If you need a range for the ratio, override 
 - finally load the url with the AddWallWebView instance
 
 see the minimobTest sample application.
