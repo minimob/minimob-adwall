@@ -29,8 +29,8 @@ public class TestCaseActivity extends AddWallActivity {
     private Context context;
     private static String webViewUrl = "";
     private String ratio;
-
     private PlaceholderFragment mPlaceholderFragment;
+    private boolean hasNetwork;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,17 +47,22 @@ public class TestCaseActivity extends AddWallActivity {
         AddRatioRange(0.31,0.80,20);
         AddRatioRange(0.81,999,30);
 
-        ratio = getRatio();
+        //ratio = getRatio();
+        ratio = RATIO;
+        //hasNetwork = isNetworkEnabled();
+        if(hasNetwork){
 
+        }
         webViewUrl = formatUrl(CAMPAIGN_ID,  USER_ID, ratio, LABEL);
     }
 
     protected void gotoAddWall(){
         mPlaceholderFragment = new PlaceholderFragment();
         getSupportFragmentManager().beginTransaction()
-                .add(com.minimob.addwall.R.id.container, mPlaceholderFragment)
+                .add(R.id.container, mPlaceholderFragment)
                 .commit();
     }
+
 
 
     @Override
@@ -101,8 +106,11 @@ public class TestCaseActivity extends AddWallActivity {
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(com.minimob.addwall.R.layout.fragment_add_wall, container, false);
-            NetworkInfo networkInfo = new NetworkInfo();
+            webView = (AddWallWebView) rootView.findViewById(R.id.webview);
 
+            loadWebView();
+
+            /*NetworkInfo networkInfo = new NetworkInfo();
             webView = (AddWallWebView) rootView.findViewById(com.minimob.addwall.R.id.webview);
             if (!TextUtils.isEmpty(webViewUrl)) {
                 if(networkInfo.hasInternetConnection(getActivity())){
@@ -110,7 +118,7 @@ public class TestCaseActivity extends AddWallActivity {
                 } else {
                     webView.loadData("No Internet Connection. Please try again.", "text/html", "UTF-8");
                 }
-            }
+            }*/
             return rootView;
         }
 
