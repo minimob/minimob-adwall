@@ -34,4 +34,4 @@ compile 'com.minimob:library:1.0.6'
 
 see the minimobTest sample application.
 
-[1]:https://github.com/shermanventures/minimob_adwall/blob/master/addwall.jar
+[1]:https://github.com/shermanventures/minimob_adwall/blob/master/addwall.jar/raw=true
