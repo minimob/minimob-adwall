@@ -23,6 +23,7 @@ public class TestCaseActivity extends AddWallActivity {
 
     private static final String CAMPAIGN_ID = "default";
     private static final String USER_ID = "6934XXXXXX";
+    private static final String REGISTRATION_ID = "";
     private static final String RATIO = "8";
     private static final String LABEL = "Minutes";
 
@@ -47,13 +48,9 @@ public class TestCaseActivity extends AddWallActivity {
         AddRatioRange(0.31,0.80,20);
         AddRatioRange(0.81,999,30);
 
-        //ratio = getRatio();
-        ratio = RATIO;
-        //hasNetwork = isNetworkEnabled();
-        if(hasNetwork){
+        ratio = getRatio();
 
-        }
-        webViewUrl = formatUrl(CAMPAIGN_ID,  USER_ID, ratio, LABEL);
+        webViewUrl = formatUrl(CAMPAIGN_ID, REGISTRATION_ID,  USER_ID, RATIO, LABEL);
     }
 
     protected void gotoAddWall(){
@@ -62,8 +59,6 @@ public class TestCaseActivity extends AddWallActivity {
                 .add(R.id.container, mPlaceholderFragment)
                 .commit();
     }
-
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -90,8 +85,7 @@ public class TestCaseActivity extends AddWallActivity {
     @Override
     protected void onResume() {
         super.onResume();
-
-        updateUI(CAMPAIGN_ID, USER_ID, RATIO, LABEL);
+        updateUI(CAMPAIGN_ID, REGISTRATION_ID, USER_ID,  RATIO, LABEL);
     }
 
     public static class PlaceholderFragment extends Fragment {
@@ -107,29 +101,15 @@ public class TestCaseActivity extends AddWallActivity {
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(com.minimob.addwall.R.layout.fragment_add_wall, container, false);
             webView = (AddWallWebView) rootView.findViewById(R.id.webview);
-
             loadWebView();
-
-            /*NetworkInfo networkInfo = new NetworkInfo();
-            webView = (AddWallWebView) rootView.findViewById(com.minimob.addwall.R.id.webview);
-            if (!TextUtils.isEmpty(webViewUrl)) {
-                if(networkInfo.hasInternetConnection(getActivity())){
-                    loadWebView();
-                } else {
-                    webView.loadData("No Internet Connection. Please try again.", "text/html", "UTF-8");
-                }
-            }*/
             return rootView;
         }
-
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setRetainInstance(true);
-
         }
-
 
         public void loadWebView() {
             webView.init(getActivity());
