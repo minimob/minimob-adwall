@@ -2,6 +2,9 @@
 An Android library to display adds to your app.
 
 #Download and installation
+Download [the latest JAR][1] or grab via Maven:
+
+
 You have to include the maven repository into the build.gradle of your app, example:
 ```maven
 repositories{
@@ -21,7 +24,7 @@ then you can grab it via maven:
 ```
 or Gradle:
 ```groovy
-compile 'com.minimob:library:1.0.5'
+compile 'com.minimob:library:1.0.6'
 ```
 
 # How to use the library:
@@ -30,3 +33,5 @@ compile 'com.minimob:library:1.0.5'
 - finally load the url with the AddWallWebView instance
 
 see the minimobTest sample application.
+
+[1]:https://github.com/shermanventures/minimob_adwall/blob/master/addwall.jar?raw=true
