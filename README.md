@@ -18,13 +18,13 @@ then you can grab it via maven:
 <dependency>
   <groupId>com.minimob</groupId>
   <artifactId>library</artifactId>
-  <version>1.0.5</version>
+  <version>1.0.9</version>
   <type>aar</type>
 </dependency>
 ```
 or Gradle:
 ```groovy
-compile 'com.minimob:library:1.0.7'
+compile 'com.minimob:library:1.0.9'
 ```
 
 # How to use the library:
