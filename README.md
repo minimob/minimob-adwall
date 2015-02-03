@@ -24,7 +24,7 @@ then you can grab it via maven:
 ```
 or Gradle:
 ```groovy
-compile 'com.minimob:library:1.0.6'
+compile 'com.minimob:library:1.0.7'
 ```
 
 # How to use the library:
