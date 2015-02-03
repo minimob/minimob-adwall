@@ -92,7 +92,6 @@ public class TestCaseActivity extends AddWallActivity {
 
         public AddWallWebView webView;
 
-
         public PlaceholderFragment() {
         }
 
