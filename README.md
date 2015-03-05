@@ -29,7 +29,7 @@ Download [the latest AAR][1] and add it to your project as a module
         //From $0.91 to $10 dollar payout the credits will be 30.
         AddRatioRange(0.81,10,30);
 
-        //To this method you declare the credit type that user will earn on adwall.
+        //To this method you declare the credit type that users will earn on adwall.
         //For example Minutes.
         setmUnitType("Minutes");
 
@@ -43,5 +43,6 @@ Download [the latest AAR][1] and add it to your project as a module
         setmGAID("38400000-8cf0-11bd-b23e-10b96e40000d");
 ```
 
+- Run the project to test it
 
 [1]:https://github.com/shermanventures/minimob_adwall/raw/master/com.minimob.adwall/com.minimob.adwall.aar

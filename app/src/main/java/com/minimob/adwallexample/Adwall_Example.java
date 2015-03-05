@@ -39,7 +39,6 @@ public class Adwall_Example extends AdWallActivity {
         setmGAID("38400000-8cf0-11bd-b23e-10b96e40000d");
 
 
-
         super.onCreate(savedInstanceState);
 
     }
