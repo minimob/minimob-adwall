@@ -1,0 +1,1 @@
+include ':app', ':adwall-release', ':com.minimov.adwall', ':com.minimob.adwall'
