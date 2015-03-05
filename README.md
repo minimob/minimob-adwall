@@ -1,17 +1,16 @@
-# Android Client Sample for Minimob Adwall
+# Android Sample for Minimob Adwall
 
-This is a sample project on how to implement minimob adwall library to diplay ads on your app
+This is a example project on how to implement minimob adwall library
+ in order diplay ads on your application.
 
-#Download and installation
-Download [the latest AAR][1] and added to your project as a module
+# Download and Install
+Download [the latest AAR][1] and add it to your project as a module
 
 # How to use the library:
 
-- Download
+- Extend the AddWallActivity on a new Activity class
 
-- Extend the AddWallActivity and create a new instance of AddWallWebView.
-
-- Implement OnCreate Method and add the below code
+- Implement OnCreate Method and add the code below
 ```groovy
         // This method is used to declare if the payout of an offer will be multiplied
         // with the last value that you provided on AddRatioRange method.
@@ -21,7 +20,7 @@ Download [the latest AAR][1] and added to your project as a module
         //to provide different credits of a payout range.
 
         //For example:
-        //From a payout for $0.01 to $0.30 cents the credits will be 10
+        //From a payout for $0.01 to $0.30 cents the credits will be 10.
         AddRatioRange(0.01,0.30,10);
 
         //From $0.31 to $0.80 cents payout the credits will be 20.
