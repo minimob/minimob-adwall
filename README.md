@@ -1,37 +1,48 @@
-# minimob_adwall
-An Android library to display adds to your app.
+# Android Client Sample for Minimob Adwall
+
+This is a sample project on how to implement minimob adwall library to diplay ads on your app
 
 #Download and installation
-Download [the latest JAR][1] or grab via Maven:
-
-
-You have to include the maven repository into the build.gradle of your app, example:
-```maven
-repositories{
-    maven{
-        mavenCentral()
-    }
-}
-```
-then you can grab it via maven:
-```xml
-<dependency>
-  <groupId>com.minimob</groupId>
-  <artifactId>library</artifactId>
-  <version>1.0.9</version>
-  <type>aar</type>
-</dependency>
-```
-or Gradle:
-```groovy
-compile 'com.minimob:library:1.0.9'
-```
+Download [the latest AAR][1] and added to your project as a module
 
 # How to use the library:
+
+- Download
+
 - Extend the AddWallActivity and create a new instance of AddWallWebView.
-- Override the formatUrl method and pass the user id, campaign id, ratio and label properties. If you need a range for the ratio, override the addRatio method.
-- finally load the url with the AddWallWebView instance
 
-see the minimobTest sample application.
+- Implement OnCreate Method and add the below code
+```groovy
+        // This method is used to declare if the payout of an offer will be multiplied
+        // with the last value that you provided on AddRatioRange method.
+        setIsRatioMultiplier(false);
 
-[1]:https://github.com/shermanventures/minimob_adwall/blob/master/addwall.jar?raw=true
+        //You can use the AddRationRange method multiple times if you need
+        //to provide different credits of a payout range.
+
+        //For example:
+        //From a payout for $0.01 to $0.30 cents the credits will be 10
+        AddRatioRange(0.01,0.30,10);
+
+        //From $0.31 to $0.80 cents payout the credits will be 20.
+        AddRatioRange(0.31,0.80,20);
+
+        //From $0.91 to $10 dollar payout the credits will be 30.
+        AddRatioRange(0.81,10,30);
+
+        //To this method you declare the credit type that user will earn on adwall.
+        //For example Minutes.
+        setmUnitType("Minutes");
+
+        //To this method you must add the UserID. This is used as an identifier for user clicks.
+        setmUserId("00306944508550");
+
+        //To this method you must add your campaign ID.
+        setmCampaign("default");
+
+        //To this method you must add the Google Advertising ID.
+        setmGAID("38400000-8cf0-11bd-b23e-10b96e40000d");
+```
+
+
+[1]:https://github.com/shermanventures/minimob_adwall/raw/master/com.minimob.adwall/com.minimob.adwall.aar

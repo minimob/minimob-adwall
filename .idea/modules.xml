@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/adwall-release/adwall-release.iml" filepath="$PROJECT_DIR$/adwall-release/adwall-release.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/com.minimob.adwall/com.minimob.adwall.iml" filepath="$PROJECT_DIR$/com.minimob.adwall/com.minimob.adwall.iml" />
-      <module fileurl="file://$PROJECT_DIR$/com.minimov.adwall/com.minimov.adwall.iml" filepath="$PROJECT_DIR$/com.minimov.adwall/com.minimov.adwall.iml" />
       <module fileurl="file://$PROJECT_DIR$/minimob_adwall.iml" filepath="$PROJECT_DIR$/minimob_adwall.iml" />
     </modules>
   </component>
