@@ -89,15 +89,15 @@ to provide different credits of a payout range.
 To this method you must declare the credit type that users will earn on adwall.
 This is only for user information
 ```groovy
- 	//For example Minutes.
-  	setmUnitType("Minutes");
+//For example Minutes.
+setmUnitType("Minutes");
 ```
 ####setmUserId
 
 To this method you must add the UserID. This is used as an identifier for user clicks.
 ```groovy
- 	//For example the user mobile number. (MSISDN)
- 	setmUserId("00306944508585");
+//For example the user mobile number. (MSISDN)
+setmUserId("00306944508585");
 ```
 
 
@@ -105,16 +105,17 @@ To this method you must add the UserID. This is used as an identifier for user c
 
 To this method you must add your campaign ID that minimob will provide to you. 
 ```groovy
- //For example.
-  setmCampaign("default");
+//For example.
+setmCampaign("default");
 ```
 
 ####setmGAID
 To this method you must add the Google Advertising ID.
 ```groovy
-   //For example.
-   setmGAID("38400000-8cf0-11bd-b23e-10b96e40000d");
+//For example.
+setmGAID("38400000-8cf0-11bd-b23e-10b96e40000d");
 ```
+
 
 
 [1]:https://github.com/shermanventures/minimob_adwall/raw/master/com.minimob.adwall/com.minimob.adwall.aar
