@@ -33,7 +33,7 @@ public class Adwall_Example extends AdWallActivity {
         setmUserId("00306944508550");
 
         //To this method you must add your campaign ID.
-        setmCampaign("default");
+        setmCampaign("your_campaign_ID");
 
         //To this method you must add the Google Advertising ID.
         setmGAID("38400000-8cf0-11bd-b23e-10b96e40000d");

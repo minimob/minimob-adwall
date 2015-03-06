@@ -11,7 +11,7 @@ When you start your Activity you will see the Adwall inside the activity.
 
 ## How to use the library:
 
-- Download [the latest AAR][1] and add it to your project as a module
+- Download [the latest AAR][1] and add it to your project as a module or Download [the latest Jar][2] and add it as a library
 
 - Create a new Activity class and change it to extend the AddWallActivity.
 
@@ -46,7 +46,7 @@ When you start your Activity you will see the Adwall inside the activity.
         setmUserId("00306944508550");
 
         //To this method you must add your campaign ID.
-        setmCampaign("default");
+        setmCampaign("your_campaign_ID");
 
         //To this method you must add the Google Advertising ID.
         setmGAID("38400000-8cf0-11bd-b23e-10b96e40000d");
@@ -106,7 +106,7 @@ setmUserId("00306944508585");
 To this method you must add your campaign ID that minimob will provide to you. 
 ```groovy
 //For example.
-setmCampaign("default");
+setmCampaign("your_campaign_ID");
 ```
 
 ####setmGAID
@@ -119,3 +119,4 @@ setmGAID("38400000-8cf0-11bd-b23e-10b96e40000d");
 
 
 [1]:https://github.com/shermanventures/minimob_adwall/raw/master/com.minimob.adwall/com.minimob.adwall.aar
+[2]:https://github.com/shermanventures/minimob_adwall/raw/master/com.minimob.adwall/com.minimob.adwall.jar
