@@ -6,12 +6,24 @@ This is a example project on how to implement minimob adwall library
 # Download and Install
 Download [the latest AAR][1] and add it to your project as a module
 
+# How it works
+
+To use the minimob adwall library you must extend your Activity class with our AddWallActivity class.
+When you Start your Activity you will show the Adwall inside the activity.
+
+
 # How to use the library:
 
-- Extend the AddWallActivity on a new Activity class
+- Download [the latest AAR][1] and add it to your project as a module
 
-- Implement OnCreate Method and add the code below
+- Create a new Activity class and change it to extend the AddWallActivity.
+
+- Do not forget to import com.minimob.adwall.activity.activity.AdWallActivity.
+
+- Implement OnCreate Method on your Activity class and add the code below:
+
 ```groovy
+
         // This method is used to declare if the payout of an offer will be multiplied
         // with the last value that you provided on AddRatioRange method.
         setIsRatioMultiplier(false);
@@ -41,8 +53,15 @@ Download [the latest AAR][1] and add it to your project as a module
 
         //To this method you must add the Google Advertising ID.
         setmGAID("38400000-8cf0-11bd-b23e-10b96e40000d");
+
+        //The super.OnCreate must be called last
+        super.onCreate(savedInstanceState);
 ```
 
-- Run the project to test it
+- From your project create an Intent to start an your Activity Class and the offerwall will open.
+
+##Methods
+
+
 
 [1]:https://github.com/shermanventures/minimob_adwall/raw/master/com.minimob.adwall/com.minimob.adwall.aar
