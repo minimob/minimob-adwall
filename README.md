@@ -64,7 +64,7 @@ When you start your Activity you will see the Adwall inside the activity.
 This method is used to declare if the payout of an offer will be multiplied with the last value that you provided on AddRatioRange method.
 
 ```groovy
-		//For example:
+//For example:
 setIsRatioMultiplier(false)
 ```
 
@@ -74,15 +74,15 @@ You can use the AddRationRange method multiple times if you need
 to provide different credits of a payout range.
 
 ```groovy
-		//For example:
-        //From a payout for $0.01 to $0.30 cents the credits will be 10.
-        AddRatioRange(0.01,0.30,10);
+//For example:
+//From a payout for $0.01 to $0.30 cents the credits will be 10.
+AddRatioRange(0.01,0.30,10);
 
-        //From $0.31 to $0.80 cents payout the credits will be 20.
-        AddRatioRange(0.31,0.80,20);
+//From $0.31 to $0.80 cents payout the credits will be 20.
+AddRatioRange(0.31,0.80,20);
 
-        //From $0.91 to $10 dollar payout the credits will be 30.
-        AddRatioRange(0.81,10,30);
+//From $0.91 to $10 dollar payout the credits will be 30.
+AddRatioRange(0.81,10,30);
 ```
 
 ####setmUnitType
