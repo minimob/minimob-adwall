@@ -118,5 +118,5 @@ setmGAID("38400000-8cf0-11bd-b23e-10b96e40000d");
 
 
 
-[1]:https://github.com/shermanventures/minimob_adwall/raw/master/com.minimob.adwall/com.minimob.adwall.aar
-[2]:https://github.com/shermanventures/minimob_adwall/raw/master/com.minimob.adwall/com.minimob.adwall.jar
+[1]:https://github.com/minimob/minimob-adwall/blob/master/com.minimob.adwall/com.minimob.adwall.aar?raw=true
+[2]:https://github.com/minimob/minimob-adwall/blob/master/com.minimob.adwall/com.minimob.adwall.jar?raw=true
