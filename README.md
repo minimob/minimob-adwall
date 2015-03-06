@@ -3,16 +3,13 @@
 This is a example project on how to implement minimob adwall library
  in order diplay ads on your application.
 
-# Download and Install
-Download [the latest AAR][1] and add it to your project as a module
-
-# How it works
+## How it works
 
 To use the minimob adwall library you must extend your Activity class with our AddWallActivity class.
-When you Start your Activity you will show the Adwall inside the activity.
+When you start your Activity you will see the Adwall inside the activity.
 
 
-# How to use the library:
+## How to use the library:
 
 - Download [the latest AAR][1] and add it to your project as a module
 
@@ -58,10 +55,66 @@ When you Start your Activity you will show the Adwall inside the activity.
         super.onCreate(savedInstanceState);
 ```
 
-- From your project create an Intent to start an your Activity Class and the offerwall will open.
+- From your project create an Intent to start your Activity Class and the offerwall will open.
 
 ##Methods
 
+### setIsRatioMultiplier
+
+This method is used to declare if the payout of an offer will be multiplied with the last value that you provided on AddRatioRange method.
+
+```groovy
+		//For example:
+setIsRatioMultiplier(false)
+```
+
+####AddRatioRange
+On this method you define the credits that user will earn based on payout.
+You can use the AddRationRange method multiple times if you need
+to provide different credits of a payout range.
+
+```groovy
+		//For example:
+        //From a payout for $0.01 to $0.30 cents the credits will be 10.
+        AddRatioRange(0.01,0.30,10);
+
+        //From $0.31 to $0.80 cents payout the credits will be 20.
+        AddRatioRange(0.31,0.80,20);
+
+        //From $0.91 to $10 dollar payout the credits will be 30.
+        AddRatioRange(0.81,10,30);
+```
+
+####setmUnitType
+To this method you must declare the credit type that users will earn on adwall.
+This is only for user information
+```groovy
+ 	//For example Minutes.
+  	setmUnitType("Minutes");
+```
+####setmUserId
+
+To this method you must add the UserID. This is used as an identifier for user clicks.
+```groovy
+ 	//For example the user mobile number. (MSISDN)
+ 	setmUserId("00306944508585");
+```
+
+
+####setmCampaign
+
+To this method you must add your campaign ID that minimob will provide to you. 
+```groovy
+ //For example.
+  setmCampaign("default");
+```
+
+####setmGAID
+To this method you must add the Google Advertising ID.
+```groovy
+   //For example.
+   setmGAID("38400000-8cf0-11bd-b23e-10b96e40000d");
+```
 
 
 [1]:https://github.com/shermanventures/minimob_adwall/raw/master/com.minimob.adwall/com.minimob.adwall.aar
